@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Cheats V2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      /* Remove default margin */
+      background-color: #000;
+      color: #fff;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #333333 transparent;
+    }
+
+    /* Customize scrollbar for Webkit (Chrome, Safari) */
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #333333;
+      border-radius: 120px;
+      /* Rounded scrollbar thumb */
+    }
+
+    body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    a {
+      text-decoration: none;
+      /* Remove underlines from links */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Make the container full height of the viewport */
+    }
+
+    /* Tab section styles */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      /* Black background */
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      /* Add a subtle shadow */
+    }
+
+    .tab {
+      text-decoration: none;
+      color: #fff;
+      margin-right: 10px;
+      /* Add space between tabs */
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 5px 10px;
+      border-color: #333333;
+      transition: border-color 0.3s ease;
+    }
+
+    .tab:hover {
+      border-color: #fff;
+      /* Add the desired outline color on hover */
+    }
+
+    .KeyB {
+      text-decoration: none;
+      color: #fff;
+      margin-right: 10px;
+      /* Add space between tabs */
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 5px 80px;
+      border-color: #00FFFF;
+      transition: border-color 0.3s ease;
+    }
+
+    /* Title section styles */
+    .title-section {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .download-button {
+      background-color: cyan;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      /* Add box-shadow transition */
+      text-decoration: none;
+      /* Remove underlines from button */
+      box-shadow: 0 0 20px cyan;
+      /* Add cyan-colored shadow on hover for glowing effect */
+    }
+
+    .download-button:hover {
+      background-color: #00FFFF;
+      box-shadow: 0 0 30px cyan;
+      /* Add cyan-colored shadow on hover for glowing effect */
+    }
+
+    .download-icon {
+      margin-right: 10px;
+    }
+
+    .download-icon img {
+      width: 24px;
+      /* Adjust the icon's width as needed */
+      height: 24px;
+      /* Adjust the icon's height as needed */
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tabs">
+      <a href="/index.html" class="tab">Home</a>
+      <a href="/index.html/#Privacy" class="tab">Privacy Policy</a>
+      <a href="https://discord.gg/8PJCpsGHF8" class="tab">Discord</a>
+      <a href="/index.html" class="tab">(On Page)</a>
+    </div>
+
+    <div class="title-section">
+      <h1 class="title">Discover Vortex Cheats V2</h1>
+      <p class="description">Click on the Key to Copy it.
+      </p>
+      <div>
+        <a id="KeyB" class="KeyB">VwX1Yz2Ab</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const copyKeyButton = document.getElementById('copyKeyButton');
+    const apiKey = document.getElementById('KeyB');
+
+    copyKeyButton.addEventListener('click', () => {
+      const keyText = apiKey.textContent;
+      const tempInput = document.createElement('input');
+      document.body.appendChild(tempInput);
+      tempInput.value = keyText;
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert('Key copied to clipboard: ' + keyText);
+    });
+  </script>
+</body>
+
+</html>
